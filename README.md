@@ -26,13 +26,13 @@ apt install git
 apt install clang
 
 after successfully installtion of these two proceed following steps
- > cd /data/data/com.termux/files/home/
- > git clone git@github.com:maddalakum/Eandro.git
- > cd /data/data/com.termux/files/home/Eandro/lib64/ ; 
- > adb shell "if [ ! -d /data/local/tmp/lib64 ] ; then mkdir /data/local/tmp/lib64 ; chmod 777 /data/local/tmp/lib64;fi " ; 
- > for i in `ls`; do  adb push $i /data/local/tmp/lib64/ ; done ; 
- > adb push ../curl /data/local/tmp/ ; 
- > adb push ../busybox /data/local/tmp/
+ . cd /data/data/com.termux/files/home/
+ . git clone git@github.com:maddalakum/Eandro.git
+ . cd /data/data/com.termux/files/home/Eandro/lib64/ ; 
+ . adb shell "if [ ! -d /data/local/tmp/lib64 ] ; then mkdir /data/local/tmp/lib64 ; chmod 777 /data/local/tmp/lib64;fi " ; 
+ . for i in `ls`; do  adb push $i /data/local/tmp/lib64/ ; done ; 
+ . adb push ../curl /data/local/tmp/ ; 
+ . adb push ../busybox /data/local/tmp/
  
 In Computer download the Zip file place the file in desktop and unzip and push the files normall as i said to android
 
