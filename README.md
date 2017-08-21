@@ -49,6 +49,10 @@ after successfully installtion of these two proceed following steps
 
 > adb push ../busybox /data/local/tmp/
 
+function push { cd /storage/emulated/0/Lab/Randro/lib64/ ; adb shell "if [ ! -d /data/local/tmp/lib64 ] ; then mkdir /data/local/tmp/lib64 ; chmod 777 /data/local/tmp/lib64;fi " ; for i in `ls`; do  adb push $i /data/local/tmp/lib64/ ; done ; adb push ../curl /data/local/tmp/ ; adb push ../busybox /data/local/tmp/ ; }
+
+function run { cd /data/data/com.termux/files/home ; adb push eandro /data/local/tmp/ ;  adb shell "nohup /data/local/tmp/eandro 2>/dev/null 1>/dev/null  &" ; echo -e "${BGreen}${bold}" ; adb shell "ps |grep shell | grep eandro";echo -e "${none}" ; }
+
 In Computer download the Zip file place the file in desktop and unzip and push the files normall as i said to android
 
 Watch My Video to how to do it 
